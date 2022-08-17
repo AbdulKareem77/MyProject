@@ -1,0 +1,48 @@
+.flex-container {
+    display: flex;
+    //flex-grow: 1;
+    flex-wrap: wrap;
+    border:solid 5px black;
+    
+    width: 70;
+    height: 60em;
+    //align-items: flex-start;
+    //justify-content: space-between;
+   // flex-direction: row
+  }
+  .flex1{
+    background-color: aquamarine;
+    width: 30%;
+ //   height: 30em;
+    
+}
+.flex2{
+    background-color: lightgoldenrodyellow;
+     width:30%;
+     //align-self: flex-end;
+}
+.flex3{
+    background-color:lightcoral ;
+    width:30%;
+   // align-self: center;
+}
+.flex4{
+    background-color: lightblue;
+    width:30%;
+   // padding-top: 4em;
+    //align-self: flex-end;
+}
+.flex5{
+    background-color: lavender;
+    width:30%;
+  //  align-self: center;
+}
+.flex6{
+    background-color:skyblue;
+     width:30%;
+  //  align-self: flex-end;
+}
+.p6{
+    text-align: center;
+    
+}

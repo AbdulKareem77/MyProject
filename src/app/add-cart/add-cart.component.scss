@@ -1,0 +1,54 @@
+.card{
+    border: 1px;
+    height: 60vh;
+    margin:25px ;
+    padding: 25px;
+    text-align: center;
+}
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  h1{
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  #customers td, #customers th {
+    //border: 1px solid #ddd;
+    padding: 3px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th,col1 {
+    padding-top: 13px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #080808;
+    color: white;
+
+  }
+  
+.imgg{ 
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    width: 70px;
+    padding: 16px
+}
+.row{
+    text-align: center;
+}
+.id1{
+    width: 100%;
+}

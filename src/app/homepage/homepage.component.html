@@ -1,0 +1,168 @@
+
+<app-shoppingcart></app-shoppingcart>
+<img  class="images" src="https://burgerking-image.s3.amazonaws.com/products/Home/web/1x_web_20220728013602534392_1440x300jpg"/>
+
+<div fxLayout="row wrap" fxLayoutGap="100px" style="margin-left: 50px;">
+    <div class="container"  *ngFor="let product of Products" >
+    <div  fxFlexFill >
+
+        <mat-card fxFlex>
+            <mat-card-title style="font-family: aria-label">{{product.productname}} </mat-card-title>
+            <mat-card-subtitle  style="font-family: aria-label">{{product.description}}</mat-card-subtitle>
+        <img mat-card-image class="img" [src]='product.photo'>
+        <mat-card-content>
+            <h2>₹{{product.productprice}} </h2>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary"  (click)="AddToCart(product)">ADD</button>
+           
+        </mat-card-actions>
+        </mat-card>
+        </div>
+    </div>  
+</div>
+
+<button mat-button (click)="openDialog()">Launch dialog</button>
+
+<!-- <div fxLayout="column" flex-start >
+<img  class="image" src="https://img.freepik.com/premium-vector/vector-art-design-colorful-graffiti-background_450492-25.jpg?w=996"/>
+
+<button mat-raised-button color="primary" style="text-align: end;">ADD</button>
+
+</div> -->
+
+  <!-- 
+
+<div class="container" fxLayout="row wrap" fxLayoutGap="0.5%" fxLayoutAlign="space-evenly center">
+    <div fxFlex="20%">
+        <mat-card>
+
+            <mat-card-title>product1</mat-card-title>
+
+        
+        <img mat-card-image class="img" src="https://s3-media0.fl.yelpcdn.com/bphoto/m-zq8go3UaEvT4vz_K5nJA/348s.jpg">
+        <mat-card-content>
+            <h2>₹299
+            </h2>
+          </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary">ADD</button>
+            <button mat-button>REMOVE</button>
+          </mat-card-actions>
+         </mat-card>
+    </div>
+    
+    <div fxFlex="20%">
+        <mat-card>
+            <mat-card-title>product2</mat-card-title>
+
+        <img mat-card-image class="img" src="https://s3-media0.fl.yelpcdn.com/bphoto/8Iw_M1c2brL0Cmqv_bwIwA/348s.jpg">
+        <mat-card-content>
+            <h2>₹269
+            </h2>
+          </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary">ADD</button>
+            <button mat-button>REMOVE</button>
+        </mat-card-actions>
+         </mat-card>
+    </div>
+</div>
+ 
+    <div fxFlex="20%">
+        <mat-card>
+            <mat-card-title>product3</mat-card-title>
+
+        <img mat-card-image class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIfmZKjc7yZF34gw9GuItUAAwqX2O7jbAuRA&usqp=CAU">
+        <mat-card-content>
+            <h2>₹259
+            </h2>
+          </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary">ADD</button>
+            <button mat-button>REMOVE</button>
+          </mat-card-actions>
+         </mat-card>
+    </div>
+    
+    <div fxFlex="20%">
+        <mat-card>
+
+        <mat-card-title>product4</mat-card-title>
+        <img mat-card-image class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIfmZKjc7yZF34gw9GuItUAAwqX2O7jbAuRA&usqp=CAU">
+        <mat-card-content>
+            <h2>₹189
+            </h2>
+          </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary">ADD</button>
+            <button mat-button>remove</button>
+          </mat-card-actions>
+         </mat-card>
+    </div>
+    
+    <div fxFlex="20%">
+        <mat-card>
+
+            <mat-card-title>product5</mat-card-title>
+
+        <img mat-card-image class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTKo8o3HS6bE5Sy-XvlpIX5xY2kmprIeefIQ&usqp=CAU">
+        <mat-card-content>
+            <h2>₹209
+            </h2>
+          </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary">ADD</button>
+            <button mat-button>remove</button>
+          </mat-card-actions>
+         </mat-card>
+    </div>
+    
+    <div fxFlex="20%">
+        <mat-card> 
+        <mat-card-title>product6</mat-card-title>   
+        <img mat-card-image class="img" src="https://static.toiimg.com/thumb/83740315.cms?imgsize=361903&width=800&height=800">
+        <mat-card-content>
+            <h2>₹240
+            </h2>
+          </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary">ADD</button>
+            <button mat-button>REMOVE</button>
+          </mat-card-actions>
+        </mat-card>
+    </div>
+
+    <div fxFlex="20%">
+        <mat-card>
+
+        <mat-card-title>product7</mat-card-title>
+        <img mat-card-image class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCGBy6Rc4sQcgyUJEb6uM__WJKxI_MbyU7gA&usqp=CAU">
+        <mat-card-content>
+            <h2>₹290
+            </h2>
+          </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary">ADD</button>
+            <button mat-button>REMOVE</button>
+          </mat-card-actions>
+        </mat-card>
+    </div>
+    <div fxFlex="20%">
+        <mat-card>
+        <mat-card-title>product8</mat-card-title>
+        <img mat-card-image class="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtXQjF5grVHN_5s3IYw7nb9MCY_9CY_PJZFw&usqp=CAU">
+        <mat-card-content>
+            <h2>₹270
+            </h2>
+          </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary">ADD</button>
+            <button mat-button>REMOVE</button>
+          </mat-card-actions> 
+       </mat-card>
+    </div>
+    
+</div>
+
+-->
