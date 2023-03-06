@@ -14,9 +14,10 @@ export class CustomerServiceService {
   {
     return this.http.post<{IdToken : string }>('https://localhost:44349/CustomeRegister/AddCustomer',data)
   }
-  signin(Email:string,password:string  )
+  //Email:string,password:string   {Email,password}
+  signin(FromForm:any  )
   {
-    return this.http.post<{IdToken :string}>('https://localhost:44349/CustomeRegister/LoginCustomer',{Email,password})
+    return this.http.post<{IdToken :string}>('https://localhost:44349/CustomeRegister/LoginCustomer',FromForm)
   }
   getProducts(): Observable<ProductInterface[]>
   {
